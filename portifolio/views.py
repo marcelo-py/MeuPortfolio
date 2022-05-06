@@ -9,7 +9,8 @@ from json import loads
 def index(request):
     menssagens_obj = Menssagens.objects.order_by('-id')
     videos_obj = VideoSugestao.objects.all()
-    detalhes_sobre_mim = SobreMim.objects.get()
+    detalhes_sobre_mim = SobreMim.objects.all()
+    
 
     if request.method != 'POST':
         return render(request, 'index.html', {
