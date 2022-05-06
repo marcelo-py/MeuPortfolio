@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #000100;
+}
+
+.header{
+    margin-bottom: 10px;
+}
+
+h1{
+    color: #bfc498;
+    font-family:cursive;
+}
+
+#amoboraAnimada{
+    width: 23px;
+    height: 23px;
+    border-radius: 20px;
+    border: 2px solid #B2BEBF;
+    position: relative;
+    top: 3px;
+}
+
+#main{
+    padding: 10px;
+    margin: 0 auto;
+    border-bottom: 3px dashed #ffffffa3;
+}
+
+#sobre{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+    margin: 0 auto;
+    width: 90%;
+}
+
+#sobre div{
+    flex: 0 1 350px;
+    margin: 5px;
+}
+
+#sobre div:last-child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+#main h2{
+    text-align: center;
+    margin-top: 5px;
+    color: #D9A700;
+    text-shadow: 0 1px 2px #000000;
+    flex: 1 1 100%;
+}
+#sobre a{
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px;
+}
+.imagensContato{
+    height: 50px;
+    width: 50px;
+    background: #8aa089;
+    border-radius: 12px;
+}
+#sobre div p{
+    color: #755300;
+    font-size: 17px;
+    text-align: justify;
+    border: 1px solid rgba(60, 60, 60, 0.500);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.fraseScraping p #detalhe{
+    display: none;
+    color: #ff0134;
+}
+.fraseScraping p:hover #detalhe{
+    display: block;
+}
+.fraseScraping{
+    padding: 10px;
+}
+.fraseScraping{
+    color: #f3f3f3;
+    font-size: 17px;
+    text-align: center;
+}
+
+.videoMenssagensContainer{
+    border-top: 3px dashed #ffffffa3;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.videoMenssagensContainer .videos{
+    justify-content: center;
+    flex: 0 1 450px;
+}
+.videos form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+}
+.videos #link{
+    flex: 1 1 390px;
+}
+.videos #usuario{
+    flex: 1 1 290px;
+}
+.videos .iframe{
+    width: 99%;
+    height: 250px;
+    border: 2px solid #c99a00;
+}
+
+.videoMenssagensContainer .menssagens{
+    width: 350px;
+    margin: 10px 0;
+}
+
+.videoMenssagensContainer .menssagens .msgarea{
+    width: 100%;
+    height: 500px;
+    border: 1px solid #edb600;
+    overflow-y: scroll;
+}
+
+.videoMenssagensContainer h3{
+    color: #D9A700;
+    text-align: center;
+}
+
+.videoMenssagensContainer input{
+    height: 25px;
+    font-size: 17px;
+    background: none;
+    border: 1px solid #edb600b4;
+    color: #f3f3f3;
+    margin: 3px auto;
+}
+.videoMenssagensContainer label{
+    font-size: 17px;
+    font-weight: bold;
+    color: #b68509;
+}
+.videoMenssagensContainer button{
+    background: #936900;
+    padding: 5px;
+    border-color: #D9A700;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.menssagens li{
+    color: #ffffff;
+    list-style: none;
+    border: 1px solid #ffffff71;
+    padding: 5px;
+    margin: 5px;
+}
+.menssagens li span{
+    display: block;
+    color: #ffffffb4;
+    font-size: 10px;
+    margin-top: 3px;
+}
+.menssagens form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.menssagens textarea{
+    width: 100%;
+    height: 30px;
+    font-size: 17px;
+    background: none;
+    border: 1px solid #b18802;
+    color: #f3f3f3;
+}
+.menssagens input{
+    width: 55%;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.footer p{
+    color: #f3f3f3;
+}
+
+
+.videos ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 5px;
+    overflow-y: scroll;
+    border: 1px solid #ffffff28;
+}
+.videos li{
+    list-style: none;
+    flex: 1 1 50px;
+    border: 1px solid #ffffffb5;
+    margin: 5px;
+}
+.videos a{
+    color: #4aab00;
+    display: block;
+    font-size: 17px;
+    padding: 5px;
+    text-align: center;
+}
+#usuariosquesugeriram{
+    margin-top: 5px;
+}
+
+.alert-dager{
+    color: rgb(255, 0, 0);
+}
+.alert-info{
+    color: #0bd500;
+}
+.alert-success{
+    color: #002fff;
+}
+.g-recaptcha{
+    border: none;
+}

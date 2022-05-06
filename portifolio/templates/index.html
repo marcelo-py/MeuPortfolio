@@ -1,0 +1,112 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block 'titulo'%}MARCELO{%endblock%}
+
+{%block 'conteudo'%}
+    <header class="header">
+        <h1>
+            MARCEL<img id="amoboraAnimada" src="{%static 'imagens/aboboraanimada.gif'%}">
+        </h1>
+    </header>
+    <div id="main">
+        <section id="sobre">
+            <div>
+                <h2>Sobre</h2>
+                <p>
+                    {%if sobremim.mostrar%}
+                    <!--Conteudo dinamico vindo do banco-->
+                        {{sobremim.sobre}}
+                    {%else%}
+                    <!--conteudo estatico-->
+                        tudo estatico
+                    {%endif%}
+                </p>
+            </div>
+            <div>
+                <h2>Projetos</h2>
+                <p>
+                    {%if sobremim.mostrar%}
+                        {{sobremim.projetos}}
+                    {%else%}
+                        estatico aqui
+                    {%endif%}
+                </p>
+            </div>
+            <div>
+                <h2>Contatos</h2>
+                <a href="https://www.instagram.com/marcell0.o/">
+                    <img class="imagensContato" src="{%static 'imagens/insta_icone.png'%}">
+                </a>
+                <a href="https://www.facebook.com/marcelo.jovi.7/">
+                    <img class="imagensContato" src="{%static 'imagens/facebook_icone.png'%}">
+                </a>
+                <a href="https://github.com/marcelo-py">
+                    <img class="imagensContato" src="{%static 'imagens/github_icone.png'%}">
+                </a>
+                <a href="https://www.linkedin.com/in/marcelo-araujo-2026841b4/">
+                    <img class="imagensContato" src="{%static 'imagens/linkedin_icone.png'%}">
+                </a>
+            </div>
+        </section>
+    </div>
+    <div class="fraseScraping">
+        <p>
+            {%include 'parciais/_messages.html'%}
+        </p>
+    </div>
+    
+    <div class="videoMenssagensContainer">
+        <div class="videos">
+            <h3>Música sugerida por {{aleatorio.usuario_video}}</h3>
+            <iframe class="iframe" src="{{aleatorio.link_video}}" name="vdosugestao"></iframe>
+            <form action="{%url 'index'%}" method="POST">
+                {%csrf_token%}
+                <label for="link">Link</label>
+                <input type="text" id="link" name="linkvideo" maxlength="100" required>
+
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="usuariovideo" maxlength="15" value="Anônimo" required>
+                <button type="submit">ENVIAR</button>
+                <div class="g-recaptcha" data-sitekey="6LchRs0fAAAAAPy5JtqA3pZaxr2QGYfZ5QByTo7y"></div>
+                
+            </form>
+            <div id="usuariosquesugeriram">
+                <h3>Visitantes que sugeriram</h3>
+                <ul>
+                    {%for video in videos%}
+                        <li>
+                            <a href="{{video.link_video}}" target="vdosugestao">{{video.usuario_video}}</a>
+                        </li>
+                    {%endfor%}
+                </ul>
+            </div>
+        </div>
+        <div class="menssagens">
+            <h3>Menssagens</h3>
+            <div class="msgarea">
+                <ul>
+                    {%for menssagem in menssagens%}
+                        <li>
+                            <strong>{{menssagem.usuario}}: </strong>
+                            {{menssagem.menssagem}}
+                            <span>{{menssagem.data|date:'d/m/Y'}}</span>
+                        </li>
+                    {%endfor%}
+                </ul>
+            </div>
+            <form action="{%url 'index'%}" method="POST">
+                {%csrf_token%}
+                <label for="menssagem">Menssagem</label>
+                <textarea name="menssagem" id="menssagem" cols="30" rows="10" required></textarea>
+                <label for="usuariomsg">Usuario:</label>
+                <input type="text" id="usuariomsg" name="usuario" value="Anônimo" required>
+                <button type="submit">ENVIAR</button>
+                <div class="g-recaptcha" data-sitekey="6LchRs0fAAAAAPy5JtqA3pZaxr2QGYfZ5QByTo7y"></div>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; MARCELO</p>
+    </footer>
+{%endblock%}
