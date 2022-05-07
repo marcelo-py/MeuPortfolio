@@ -27,8 +27,10 @@
                 <h2>Projetos</h2>
                 <p>
                     {%if sobremim.mostrar%}
+                    <!--Conteudo dinamico vindo do banco-->
                         {{sobremim.projetos}}
                     {%else%}
+                    <!--conteudo estatico-->
                         estatico aqui
                     {%endif%}
                 </p>
@@ -65,11 +67,10 @@
                 <label for="link">Link</label>
                 <input type="text" id="link" name="linkvideo" maxlength="100" required>
 
-                <label for="usuario">Usuario</label>
+                <label for="usuario">Visitante</label>
                 <input type="text" id="usuario" name="usuariovideo" maxlength="15" value="Anônimo" required>
                 <button type="submit">ENVIAR</button>
                 <div class="g-recaptcha" data-sitekey="6LchRs0fAAAAAPy5JtqA3pZaxr2QGYfZ5QByTo7y"></div>
-                
             </form>
             <div id="usuariosquesugeriram">
                 <h3>Visitantes que sugeriram</h3>
@@ -87,11 +88,13 @@
             <div class="msgarea">
                 <ul>
                     {%for menssagem in menssagens%}
-                        <li>
-                            <strong>{{menssagem.usuario}}: </strong>
-                            {{menssagem.menssagem}}
-                            <span>{{menssagem.data|date:'d/m/Y'}}</span>
-                        </li>
+                        {%if menssagem.mostrar%}
+                            <li>
+                                <strong>{{menssagem.usuario}}: </strong>
+                                {{menssagem.menssagem}}
+                                <span>{{menssagem.data|date:'d/m/Y'}}</span>
+                            </li>
+                        {%endif%}
                     {%endfor%}
                 </ul>
             </div>
@@ -99,8 +102,8 @@
                 {%csrf_token%}
                 <label for="menssagem">Menssagem</label>
                 <textarea name="menssagem" id="menssagem" cols="30" rows="10" required></textarea>
-                <label for="usuariomsg">Usuario:</label>
-                <input type="text" id="usuariomsg" name="usuario" value="Anônimo" required>
+                <label for="usuariomsg">Visitante</label>
+                <input type="text" id="usuariomsg" name="usuario" value="Anônimo" maxlength="15" required>
                 <button type="submit">ENVIAR</button>
                 <div class="g-recaptcha" data-sitekey="6LchRs0fAAAAAPy5JtqA3pZaxr2QGYfZ5QByTo7y"></div>
             </form>

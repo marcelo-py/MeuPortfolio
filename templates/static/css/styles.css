@@ -244,3 +244,6 @@ h1{
 .g-recaptcha{
     border: none;
 }
+.g-recaptcha{
+    margin: 0 auto 10px auto;
+}

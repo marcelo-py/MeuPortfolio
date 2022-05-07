@@ -7,6 +7,7 @@ class Menssagens(models.Model):
     menssagem = models.TextField()
     usuario = models.CharField(max_length=15)
     data = models.DateField(default=timezone.now)
+    mostrar = models.BooleanField(default=True)
     
     def __str__(self):
         return self.usuario

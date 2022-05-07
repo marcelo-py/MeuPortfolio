@@ -3,8 +3,9 @@ from .models import Menssagens, VideoSugestao, SobreMim
 
 
 class MenssagensAdmin(admin.ModelAdmin):
-    list_display = ('id', 'menssagem', 'usuario')
+    list_display = ('id', 'menssagem', 'usuario', 'mostrar')
     list_display_links = ('id', 'menssagem')
+    list_editable = ('mostrar', 'usuario')
 
 
 class VideoAdmin(admin.ModelAdmin):

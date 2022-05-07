@@ -10,8 +10,7 @@ from decouple import config
 def index(request):
     menssagens_obj = Menssagens.objects.order_by('-id')
     videos_obj = VideoSugestao.objects.all()
-    detalhes_sobre_mim = SobreMim.objects.all()
-
+    detalhes_sobre_mim = SobreMim.objects.all()[0]
 
     if request.method != 'POST':
         return render(request, 'index.html', {
@@ -27,7 +26,7 @@ def index(request):
 
     captcha_token = request.POST.get('g-recaptcha-response')
     cap_url = 'https://www.google.com/recaptcha/api/siteverify'
-    cap_secret = config('cap_secret')#coloque seu hash do captcha se acordo com o que irá no front
+    cap_secret = config('cap_secret')#coloque seu hash do captcha se acordo com o que irá no front. Tudo nas variavis no arquivo .env que vc criará na raiz do projeto
     cap_data = {'secret': cap_secret, 'response': captcha_token}
     cap_server_response = requests.post(url=cap_url, data=cap_data)
     cap_json = loads(cap_server_response.text)
@@ -76,3 +75,5 @@ def index(request):
 
     return redirect('index')
 
+
+#Feito por Marcelo Araujo
