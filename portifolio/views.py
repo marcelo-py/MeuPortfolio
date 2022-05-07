@@ -4,13 +4,14 @@ from random import choice
 from django.contrib import messages
 import requests
 from json import loads
+from decouple import config
 
 
 def index(request):
     menssagens_obj = Menssagens.objects.order_by('-id')
     videos_obj = VideoSugestao.objects.all()
     detalhes_sobre_mim = SobreMim.objects.all()
-    
+
 
     if request.method != 'POST':
         return render(request, 'index.html', {
@@ -26,7 +27,7 @@ def index(request):
 
     captcha_token = request.POST.get('g-recaptcha-response')
     cap_url = 'https://www.google.com/recaptcha/api/siteverify'
-    cap_secret = '6LchRs0fAAAAABZrC6qZUtKAKNrv3Rvwna0q6rW_'
+    cap_secret = config('cap_secret')#coloque seu hash do captcha se acordo com o que irá no front
     cap_data = {'secret': cap_secret, 'response': captcha_token}
     cap_server_response = requests.post(url=cap_url, data=cap_data)
     cap_json = loads(cap_server_response.text)
