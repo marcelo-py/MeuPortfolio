@@ -10,3 +10,6 @@ Feito com django, HTML, CSS e SQL
 
 ## detalhe
 crie um arquivo ```.env``` na raiz do projeto e coloque as variaveis do arquivo ```.env.exemplo``` nele
+
+### Conteudo dinamico e estatico 'Sobre' e 'Projetos'
+tens a opção de mostrar o conteudo 'Sobre' e 'Projetos' estaticamente ou dinamicamente, de acordo com a caixa 'mostrar' na pagina adm-Django (tabela: sobremim)
