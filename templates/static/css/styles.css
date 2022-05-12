@@ -14,7 +14,9 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-
+.header a{
+    text-decoration: none;
+}
 #amoboraAnimada{
     width: 23px;
     height: 23px;
@@ -38,13 +40,12 @@ body{
 }
 .header ul li{
     list-style: none;
-    margin: 10px;
+    margin: 5px;
     list-style: none;
 }
 .header ul a{
     padding: 5px;
     display: block;
-    text-decoration: none;
 }
 .header ul a:hover{
     background-color: #8aa089;
@@ -138,6 +139,9 @@ body{
     width: 99%;
     height: 250px;
     border: 2px solid #c99a00;
+}
+#usuariosquesugeriram a:focus{
+    color: #ff0134;
 }
 
 .videoMenssagensContainer .menssagens{
@@ -255,9 +259,6 @@ body{
 }
 .alert-success{
     color: #002fff;
-}
-.g-recaptcha{
-    border: none;
 }
 .g-recaptcha{
     margin: 0 auto 10px auto;

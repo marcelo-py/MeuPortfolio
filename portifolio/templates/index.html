@@ -5,9 +5,11 @@
 
 {%block 'conteudo'%}
     <header class="header">
-        <h1 class="h1">
-            MARCEL<img id="amoboraAnimada" src="{%static 'imagens/aboboraanimada.gif'%}">
-        </h1>
+        <a href="{%url 'index'%}">
+            <h1 class="h1">
+                MARCEL<img id="amoboraAnimada" src="{%static 'imagens/aboboraanimada.gif'%}">
+            </h1>
+        </a>
         <ul>
             <li>
                 <a href="https://www.instagram.com/marcell0.o/" target="_blank" rel="external">
@@ -76,8 +78,8 @@
 
                 <label for="usuario">Visitante</label>
                 <input type="text" id="usuario" name="usuariovideo" maxlength="15" value="Anônimo" required>
-                <button type="submit">ENVIAR</button>
                 <div class="g-recaptcha" data-sitekey="6LchRs0fAAAAAPy5JtqA3pZaxr2QGYfZ5QByTo7y"></div>
+                <button type="submit">ENVIAR</button>
             </form>
             <div id="usuariosquesugeriram">
                 <h3>Visitantes que Sugeriram</h3>
