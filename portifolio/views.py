@@ -9,7 +9,7 @@ from decouple import config
 
 def index(request):
     menssagens_obj = Menssagens.objects.order_by('-id')
-    videos_obj = VideoSugestao.objects.all()
+    videos_obj = VideoSugestao.objects.order_by('-id')
     detalhes_sobre_mim = SobreMim.objects.all()[0]
 
     if request.method != 'POST':
@@ -53,15 +53,15 @@ def index(request):
             messages.info(request, 'Usuário da Sugestão precisa ser maior que 3 caractere!')
             return redirect('index')
 
-        if 'youtu' in link_video:
+        if 'youtu' in link_video and '=' not in link_video:
+                    link_base = 'https://www.youtube.com/embed/' + link_video.split('/')[-1]
+
+        elif 'youtu' in link_video:
             depoisigual = link_video.find('=')
             link_base = 'https://www.youtube.com/embed/' + link_video[depoisigual+1:]
 
         elif 'vimeo' in link_video:
             link_base = 'https://player.vimeo.com/video/' + link_video.split('/')[-1]
-
-        elif 'youtu' in link_video and '=' not in link_video:
-            link_base = 'https://www.youtube.com/embed/' + link_video.split('/')[-1]
 
         else:
             messages.error(request, 'Somente Links do Youtube e do Vimeo!')

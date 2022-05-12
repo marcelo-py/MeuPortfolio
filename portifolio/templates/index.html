@@ -5,9 +5,31 @@
 
 {%block 'conteudo'%}
     <header class="header">
-        <h1>
+        <h1 class="h1">
             MARCEL<img id="amoboraAnimada" src="{%static 'imagens/aboboraanimada.gif'%}">
         </h1>
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/marcell0.o/" target="_blank" rel="external">
+                    <img class="imagensContato" src="{%static 'imagens/insta_icone.png'%}">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/marcelo.jovi.7/" target="_blank" rel="external">
+                    <img class="imagensContato" src="{%static 'imagens/facebook_icone.png'%}">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/marcelo-py" target="_blank" rel="external">
+                    <img class="imagensContato" src="{%static 'imagens/github_icone.png'%}">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/marcelo-araujo-2026841b4/" target="_blank" rel="external">
+                    <img class="imagensContato" src="{%static 'imagens/linkedin_icone.png'%}">
+                </a>
+            </li>
+        </ul>
     </header>
     <div id="main">
         <section id="sobre">
@@ -19,7 +41,7 @@
                         {{sobremim.sobre}}
                     {%else%}
                     <!--conteudo estatico-->
-                        tudo estatico
+                        Me chamo Marcelo tenho 22 anos, de São Luís-MA. No 3º período de Redes de Computadores no IFMA comecei a estudar programação no final de 2020 com o Guanabara(Curso em vídeo) apenas o básico, logo após passei mais 5 meses estudando POO e aplicando no Python Logo após estudei algumas libs nativas como: Tkinter, os, sys etc; e então comecei a estudar libs externas como Pygame, Scrapy, PyMySQL e Django(onde me aprofundo até hoje) e ao mesmo tempo estudo e pratico bastante HTML e CSS
                     {%endif%}
                 </p>
             </div>
@@ -31,24 +53,9 @@
                         {{sobremim.projetos}}
                     {%else%}
                     <!--conteudo estatico-->
-                        estatico aqui
+                        Por enquanto uma <a href="https://github.com/marcelo-py/livraria-com-django" target="_blank" rel="external">Livraria 2.0</a> feita com Django, um<a href="https://github.com/marcelo-py/portifolio"> portfólio 1.0 </a>, etc... para ver mais visite<a href="https://github.com/marcelo-py" target="_blank" rel="external"> meu GitHub</a>
                     {%endif%}
                 </p>
-            </div>
-            <div>
-                <h2>Contatos</h2>
-                <a href="https://www.instagram.com/marcell0.o/">
-                    <img class="imagensContato" src="{%static 'imagens/insta_icone.png'%}">
-                </a>
-                <a href="https://www.facebook.com/marcelo.jovi.7/">
-                    <img class="imagensContato" src="{%static 'imagens/facebook_icone.png'%}">
-                </a>
-                <a href="https://github.com/marcelo-py">
-                    <img class="imagensContato" src="{%static 'imagens/github_icone.png'%}">
-                </a>
-                <a href="https://www.linkedin.com/in/marcelo-araujo-2026841b4/">
-                    <img class="imagensContato" src="{%static 'imagens/linkedin_icone.png'%}">
-                </a>
             </div>
         </section>
     </div>
@@ -60,12 +67,12 @@
     
     <div class="videoMenssagensContainer">
         <div class="videos">
-            <h3>Música sugerida por {{aleatorio.usuario_video}}</h3>
+            <h3>Sugestões de Músicas</h3>
             <iframe class="iframe" src="{{aleatorio.link_video}}" name="vdosugestao"></iframe>
             <form action="{%url 'index'%}" method="POST">
                 {%csrf_token%}
                 <label for="link">Link</label>
-                <input type="text" id="link" name="linkvideo" maxlength="100" required>
+                <input type="text" id="link" name="linkvideo" maxlength="100" placeholder="Insira um Link" required>
 
                 <label for="usuario">Visitante</label>
                 <input type="text" id="usuario" name="usuariovideo" maxlength="15" value="Anônimo" required>
@@ -73,7 +80,7 @@
                 <div class="g-recaptcha" data-sitekey="6LchRs0fAAAAAPy5JtqA3pZaxr2QGYfZ5QByTo7y"></div>
             </form>
             <div id="usuariosquesugeriram">
-                <h3>Visitantes que sugeriram</h3>
+                <h3>Visitantes que Sugeriram</h3>
                 <ul>
                     {%for video in videos%}
                         <li>
@@ -84,7 +91,7 @@
             </div>
         </div>
         <div class="menssagens">
-            <h3>Menssagens</h3>
+            <h3>Mensagens</h3>
             <div class="msgarea">
                 <ul>
                     {%for menssagem in menssagens%}
@@ -100,8 +107,8 @@
             </div>
             <form action="{%url 'index'%}" method="POST">
                 {%csrf_token%}
-                <label for="menssagem">Menssagem</label>
-                <textarea name="menssagem" id="menssagem" cols="30" rows="10" required></textarea>
+                <label for="menssagem">Mensagem</label>
+                <textarea name="menssagem" id="menssagem" placeholder="Insira uma Texto" required></textarea>
                 <label for="usuariomsg">Visitante</label>
                 <input type="text" id="usuariomsg" name="usuario" value="Anônimo" maxlength="15" required>
                 <button type="submit">ENVIAR</button>
