@@ -151,18 +151,10 @@ body{
 
 .videoMenssagensContainer .menssagens .msgarea{
     height: 500px;
-    transform-origin: 50% 50%;
-    transform: rotate(180deg);
     overflow-y: auto;
-    direction: rtl;
-    text-align: left;
     border: 1px solid #edb600;
 }
-.msgarea ul{
-    float: left;
-    width: 100%; 
-    transform: rotate(180deg);
-}
+
 .videoMenssagensContainer h3{
     color: #D9A700;
     text-align: center;
@@ -196,7 +188,6 @@ body{
     padding: 5px;
     margin: 5px;
     word-wrap: break-word;
-    float: left;
 }
 .menssagens li span{
     display: block;
