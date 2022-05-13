@@ -262,7 +262,7 @@ body{
     color: #002fff;
 }
 .g-recaptcha{
-    margin: 0 auto 10px auto;
+    margin: 0 auto 5px auto;
 }
 
 @media (max-width: 819px){
