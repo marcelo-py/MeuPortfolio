@@ -196,6 +196,7 @@ body{
     padding: 5px;
     margin: 5px;
     word-wrap: break-word;
+    float: left;
 }
 .menssagens li span{
     display: block;
