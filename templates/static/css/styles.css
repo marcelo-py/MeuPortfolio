@@ -151,6 +151,7 @@ body{
 
 .videoMenssagensContainer .menssagens .msgarea{
     height: 500px;
+    transform-origin: 50% 50%;
     transform: rotate(180deg);
     overflow-y: auto;
     direction: rtl;
@@ -158,6 +159,7 @@ body{
     border: 1px solid #edb600;
 }
 .msgarea ul{
+    float: left;
     width: 100%; 
     transform: rotate(180deg);
 }
