@@ -13,6 +13,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 1px solid #d3d3d32f;
 }
 .header a{
     text-decoration: none;
@@ -101,13 +102,13 @@ body{
 .fraseScraping p:hover #detalhe{
     display: block;
 }
-.fraseScraping{
-    padding: 10px;
-}
+
 .fraseScraping{
     color: #f3f3f3;
     font-size: 17px;
     text-align: center;
+    padding: 10px;
+    cursor:default;
 }
 
 .videoMenssagensContainer{
@@ -179,6 +180,7 @@ body{
     border-color: #D9A700;
     font-weight: bold;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .menssagens li{
@@ -270,5 +272,18 @@ body{
     .menssagens{
         border-top: 2px solid #d0ccbf;
         border-bottom: 2px solid #d0ccbf
+    }
+}
+
+@media (max-width: 450px){
+    #sobre div, p{
+        padding: 5px;
+        margin: 0;
+    }
+    #main{
+        padding: 0;
+    }
+    .videoMenssagensContainer .menssagens{
+        width: 100%;
     }
 }
