@@ -13,7 +13,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid #d3d3d32f;
+    border-bottom: 1px solid #d3d3d316;
 }
 .header a{
     text-decoration: none;
