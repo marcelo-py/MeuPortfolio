@@ -286,4 +286,8 @@ body{
     .videoMenssagensContainer .menssagens{
         width: 100%;
     }
+    #sobre{
+        margin: 0;
+        width: 100%;
+    }
 }
