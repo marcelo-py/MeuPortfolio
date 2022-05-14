@@ -11,18 +11,19 @@ body{
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #d3d3d316;
 }
 .header a{
     text-decoration: none;
+    display: block;
 }
 #amoboraAnimada{
     width: 23px;
     height: 23px;
     border-radius: 20px;
-    border: 2px solid #B2BEBF;
+    border: 2px solid #cdd4d5;
     position: relative;
     top: 3px;
 }
@@ -30,12 +31,11 @@ body{
 .imagensContato{
     height: 30px;
     width: 30px;
-    background: #8aa089;
+    background: #ffffff7f;
     border-radius: 7px;
 }
 .header ul{
     display: flex;
-    width: 400px;
     justify-content: center;
 }
 .header ul li{
@@ -288,5 +288,10 @@ body{
     #sobre{
         margin: 0;
         width: 100%;
+    }
+}
+@media (max-width: 366px){
+    .header ul{
+        margin: 0 auto;
     }
 }
