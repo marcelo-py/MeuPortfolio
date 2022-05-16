@@ -5,6 +5,7 @@ from django.contrib import messages
 import requests
 from json import loads
 from decouple import config
+import datetime
 
 
 def index(request):
@@ -18,6 +19,7 @@ def index(request):
             'videos': videos_obj,
             'aleatorio': choice(videos_obj),
             'sobremim': detalhes_sobre_mim,
+            'ano': datetime.date.today().year
         })
     
     usuario = request.POST.get('usuario')

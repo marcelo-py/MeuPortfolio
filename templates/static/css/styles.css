@@ -13,7 +13,6 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #d3d3d316;
 }
 .header a{
     text-decoration: none;
@@ -72,7 +71,7 @@ body{
 }
 
 #sobre div{
-    flex: 0 1 350px;
+    flex: 0 1 400px;
     margin: 5px;
 }
 
@@ -88,7 +87,6 @@ body{
     color: #755300;
     font-size: 17px;
     text-align: justify;
-    border: 1px solid rgba(60, 60, 60, 0.500);
     border-radius: 5px;
     padding: 10px;
     text-indent: 15px;
@@ -218,6 +216,7 @@ body{
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    border-top: 1px solid #d3d3d316;
 }
 .footer p{
     color: #f3f3f3;
@@ -270,7 +269,6 @@ body{
     }
     .menssagens{
         border-top: 2px solid #d0ccbf;
-        border-bottom: 2px solid #d0ccbf
     }
 }
 
