@@ -47,7 +47,7 @@ body{
     display: block;
 }
 .header ul a:hover{
-    background-color: #8aa089;
+    background-color: #c7c7c7b1;
     border-radius: 5px;
 }
 #main{
@@ -78,7 +78,7 @@ body{
 #sobre .projetosGB{
     overflow-y: auto;
     max-height: 450px;
-    padding: 3px;
+    padding: 5px;
     border: 1px solid #edb600;
 }
 #sobre .projetosGB a{
@@ -310,5 +310,3 @@ body{
         margin: 0 auto;
     }
 }
-
-
