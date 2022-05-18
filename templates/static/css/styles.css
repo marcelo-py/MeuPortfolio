@@ -60,7 +60,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-around;
+    justify-content:space-between;
     margin: 0 auto;
     width: 90%;
 }
@@ -70,9 +70,25 @@ body{
     text-decoration: none;
 }
 
+
 #sobre div{
     flex: 0 1 400px;
+}
+
+#sobre .projetosGB{
+    overflow-y: auto;
+    max-height: 450px;
+    padding: 3px;
+    border: 1px solid #edb600;
+}
+#sobre .projetosGB a{
+    display: block;
     margin: 5px;
+}
+
+#sobre .projetosGB img{
+    width: 100%;
+    border-radius: 5px;
 }
 
 #main h2{
@@ -245,6 +261,7 @@ body{
     padding: 5px;
     text-align: center;
 }
+
 #usuariosquesugeriram{
     margin-top: 5px;
     border-top: 1px solid #B2BEBF;
@@ -293,3 +310,5 @@ body{
         margin: 0 auto;
     }
 }
+
+

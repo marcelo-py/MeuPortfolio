@@ -48,16 +48,25 @@
                 </p>
             </div>
             <div>
-                <h2>Projetos</h2>
-                <p>
-                    {%if sobremim.mostrar%}
-                    <!--Conteudo dinamico vindo do banco-->
-                        {{sobremim.projetos}}
-                    {%else%}
-                    <!--conteudo estatico-->
-                        Por enquanto uma <a href="https://github.com/marcelo-py/livraria-com-django" target="_blank" rel="external">Livraria 2.0</a> feita com Django, um<a href="https://github.com/marcelo-py/portifolio"> portfólio 1.0 </a>, etc... para ver mais visite<a href="https://github.com/marcelo-py" target="_blank" rel="external"> meu GitHub</a>
-                    {%endif%}
-                </p>
+                <h2>Principais Projetos</h2>
+                {%if sobremim.mostrar%}
+                <!--Conteudo dinamico vindo do banco-->
+                    {{sobremim.projetos}}
+                {%else%}
+                <!--conteudo estatico-->
+                    <div class="projetosGB">
+                        <a href="https://github.com/marcelo-py/holyeditais" target="_blank" rel="external">
+                            <img src="{%static 'imagens/projetos/holyeditais.png'%}" >
+                        </a>
+                        <a href="https://github.com/marcelo-py/livraria-com-django" target="_blank" rel="external">
+                            <img src="{%static 'imagens/projetos/livraria-com-django.png'%}"></a>
+                        <a href="https://github.com/marcelo-py/MeuPortfolio" target="_blank" rel="external">
+                            <img src="{%static 'imagens/projetos/MeuPortfolio.png'%}"></a>
+                        <a href="https://github.com/marcelo-py/MeusProjetosPython" target="_blank" rel="external">
+                            <img src="{%static 'imagens/projetos/MeusProjetosPython.png'%}">
+                        </a>
+                    </div>
+                {%endif%}
             </div>
         </section>
     </div>

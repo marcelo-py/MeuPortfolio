@@ -19,7 +19,7 @@ def index(request):
             'videos': videos_obj,
             'aleatorio': choice(videos_obj),
             'sobremim': detalhes_sobre_mim,
-            'ano': datetime.date.today().year
+            'ano': datetime.date.today().year,
         })
     
     usuario = request.POST.get('usuario')
