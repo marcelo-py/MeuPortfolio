@@ -14,9 +14,10 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.header a{
+.header > a{
     text-decoration: none;
     display: block;
+    margin-right: 35px;
 }
 #amoboraAnimada{
     width: 23px;
@@ -60,7 +61,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-between;
+    justify-content:space-around;
     margin: 0 auto;
     width: 90%;
 }
@@ -232,7 +233,7 @@ body{
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    border-top: 1px solid #d3d3d316;
+    border-top: 1px solid #d3d3d338;
 }
 .footer p{
     color: #f3f3f3;
@@ -305,7 +306,7 @@ body{
         width: 100%;
     }
 }
-@media (max-width: 366px){
+@media (max-width: 402px){
     .header ul{
         margin: 0 auto;
     }
