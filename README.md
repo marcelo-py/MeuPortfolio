@@ -4,7 +4,7 @@ Feito com django, HTML, CSS e SQL
 Caso queira adptar para o site ficar a sua cara e subir para o heroku, fiz a boa de deixa os arquivos e configurar para ser aceito(duvidas procure a doc. do heroku sobre isso) 
 
 # Antes de rodar
-* Instale o virtualenv na raíz do projeto```python3 -m venv .venv```
+* Instale o virtualenv na raíz do projeto```python -m venv .venv```
 * Ative o virtualenv ```.\venv\Scripts\Activate```
 * Instale as libs necessárias no arquivo requirements.txt na raíz do projeto ```pip install -r requirements.txt```
 * agora rode ```python manage.py runserver```
