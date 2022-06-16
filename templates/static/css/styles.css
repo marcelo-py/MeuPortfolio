@@ -72,19 +72,16 @@ body{
 }
 
 #tec{
-    padding: 100px 0;
-}
-
-#tecdominadas{
+    padding: 150px 0;
     text-align: center;
 }
 
-#tecdominadas a{
-    flex: 1 0 350px;
-}
 #tecdominadas img{
-    max-width: 300px;
+    max-height: 200px;
+    max-width: 100%;
 }
+
+
 #sobre a{
     color: #4aab00;
     font-size: 17px;
