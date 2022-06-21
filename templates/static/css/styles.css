@@ -68,19 +68,18 @@ body{
 }
 
 #sobre div:first-child{
-    width: 550px;
+    width: 540px;
 }
 
 #tec{
-    padding: 150px 0;
+    padding: 100px 0;
     text-align: center;
 }
 
 #tecdominadas img{
-    max-height: 200px;
+    max-height: 100px;
     max-width: 100%;
 }
-
 
 #sobre a{
     color: #4aab00;
@@ -292,6 +291,7 @@ body{
 }
 .g-recaptcha{
     margin: 0 auto 5px auto;
+    max-height: 100px;
 }
 
 @media (max-width: 819px){
@@ -306,7 +306,6 @@ body{
 @media (max-width: 450px){
     #sobre div, p{
         padding: 5px;
-        margin: 0;
     }
     #main{
         padding: 0;
@@ -315,7 +314,6 @@ body{
         width: 100%;
     }
     #sobre{
-        margin: 0;
         width: 100%;
     }
 }
@@ -327,5 +325,10 @@ body{
 @media (max-width: 550px){
     #sobre div:first-child{
         width: 100%;
+    }
+}
+@media (max-width: 653px){
+    #sobre > div:last-child{
+        display: none;
     }
 }
