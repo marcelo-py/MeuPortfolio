@@ -56,7 +56,6 @@ body{
     padding: 10px;
     margin: 0 auto;
     border-bottom: 3px dashed #9a7e7e71;
-    padding-bottom: 100px;
 }
 
 #sobre{
@@ -76,7 +75,7 @@ body{
 }
 
 #tecdominadas img{
-    max-height: 100px;
+    max-height: 120px;
     max-width: 100%;
 }
 
