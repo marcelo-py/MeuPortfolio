@@ -64,7 +64,6 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    width: 90%;
 }
 
 #sobre div:first-child{
@@ -72,37 +71,13 @@ body{
 }
 
 #tec{
-    padding: 100px 0;
+    padding: 70px 0;
     text-align: center;
 }
 
 #tecdominadas img{
     max-height: 100px;
     max-width: 100%;
-}
-
-#sobre a{
-    color: #4aab00;
-    font-size: 17px;
-    text-decoration: none;
-}
-
-#sobre .projetosGB{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    overflow-y: auto;
-    padding: 5px;
-}
-#sobre .projetosGB a{
-    display: block;
-    margin: 5px;
-    flex: 1 0 270px;
-}
-
-#sobre .projetosGB img{
-    width: 100%;
-    border-radius: 5px;
 }
 
 #main h2{
@@ -291,7 +266,6 @@ body{
 }
 .g-recaptcha{
     margin: 0 auto 5px auto;
-    max-height: 100px;
 }
 
 @media (max-width: 819px){
@@ -325,10 +299,5 @@ body{
 @media (max-width: 550px){
     #sobre div:first-child{
         width: 100%;
-    }
-}
-@media (max-width: 653px){
-    #sobre > div:last-child{
-        display: none;
     }
 }
