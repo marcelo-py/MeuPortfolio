@@ -104,7 +104,7 @@ body{
 
 .fraseScraping{
     color: #f3f3f3;
-    font-size: 17px;
+    font-size: 14px;
     text-align: center;
     padding: 10px;
     cursor:default;
@@ -273,7 +273,7 @@ body{
         border-top: 2px solid #d0ccbf;
     }
     #main{
-        width: 90%;
+        width: 95%;
     }
 }
 
