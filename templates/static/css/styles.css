@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: hsl(0deg 0% 9%);
+    background-color: #202020;
 }
 
 .header{
@@ -56,6 +56,7 @@ body{
     padding: 10px;
     margin: 0 auto;
     border-bottom: 3px dashed #9a7e7e71;
+    width: 60%;
 }
 
 #sobre{
@@ -63,10 +64,7 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-}
-
-#sobre div:first-child{
-    width: 540px;
+    flex-wrap: wrap;
 }
 
 #tec{
@@ -131,7 +129,7 @@ body{
     align-content: space-between;
 }
 .videos #link{
-    flex: 1 1 390px;
+    flex: 1 1 370px;
 }
 .videos #usuario{
     flex: 1 1 290px;
@@ -274,29 +272,22 @@ body{
     .menssagens{
         border-top: 2px solid #d0ccbf;
     }
+    #main{
+        width: 90%;
+    }
 }
 
 @media (max-width: 450px){
-    #sobre div, p{
-        padding: 5px;
-    }
     #main{
         padding: 0;
     }
     .videoMenssagensContainer .menssagens{
         width: 100%;
     }
-    #sobre{
-        width: 100%;
-    }
+    
 }
 @media (max-width: 402px){
     .header ul{
         margin: 0 auto;
-    }
-}
-@media (max-width: 550px){
-    #sobre div:first-child{
-        width: 100%;
     }
 }
