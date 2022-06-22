@@ -108,6 +108,7 @@ body{
     text-align: center;
     padding: 10px;
     cursor:default;
+    text-decoration: underline;
 }
 
 .videoMenssagensContainer{
