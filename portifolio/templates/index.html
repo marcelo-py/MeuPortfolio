@@ -65,7 +65,7 @@
     
     <div class="videoMenssagensContainer">
         <div class="videos">
-            <h3>Sugestões de Músicas</h3>
+            <h3>Sugerido por {{aleatorio.usuario_video}}</h3>
             <iframe class="iframe" src="{{aleatorio.link_video}}" name="vdosugestao"></iframe>
             <form action="{%url 'index'%}" method="POST">
                 {%csrf_token%}
